@@ -1,25 +1,29 @@
 {
-  "name": "corrently4domoticz",
-  "version": "0.0.1",
-  "description": "Corrently Green Power Index for Domoticz",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/energychain/corrently4domoticz.git"
-  },
-  "keywords": [
-    "domoticz"
-  ],
-  "author": "Corrently Corp",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/energychain/corrently4domoticz/issues"
-  },
-  "homepage": "https://github.com/energychain/corrently4domoticz#readme",
-  "dependencies": {
-    "request": "^2.88.0"
-  }
+	"name": "corrently4domoticz",
+	"version": "0.0.1",
+	"description": "Corrently Green Power Index for Domoticz",
+	"keywords": [
+		"domoticz"
+	],
+	"bin": {
+		"corrently4domoticz": "./index.js"
+	},
+	"homepage": "https://github.com/energychain/corrently4domoticz#readme",
+	"bugs": {
+		"url": "https://github.com/energychain/corrently4domoticz/issues"
+	},
+	"license": "ISC",
+	"author": "Corrently Corp",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/energychain/corrently4domoticz.git"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"dotenv": "^6.2.0",
+		"request": "^2.88.0"
+	}
 }
