@@ -20,7 +20,6 @@ http_request.get("https://api.corrently.io/core/gsi?plz="+process.env.PLZ,functi
     if(typeof process.env.IDX_current_gsi != "undefined") {
         console.log(process.env.DOMOTICZ_JSON_URL+"?type=command&param=udevice&idx="+process.env.IDX_current_gsi+"&nvalue=0&svalue="+current_gsi.eevalue);
         http_request.get(process.env.DOMOTICZ_JSON_URL+"?type=command&param=udevice&idx="+process.env.IDX_current_gsi+"&nvalue=0&svalue="+current_gsi.eevalue,function(a,b,c) {
-            console.log(c);
         });
       }
     if(typeof process.env.IDX_current_alert != "undefined") {
@@ -30,20 +29,15 @@ http_request.get("https://api.corrently.io/core/gsi?plz="+process.env.PLZ,functi
         if(current_gsi.eevalue<20) alert_level=4;
 
         http_request.get(process.env.DOMOTICZ_JSON_URL+"?type=command&param=udevice&idx="+process.env.IDX_current_alert+"&nvalue="+alert_level+"&svalue="+current_gsi.eevalue+escape(" ab ")+escape(new Date(current_gsi.timeStamp).toLocaleString()),function(a,b,c) {
-            console.log(c);
         })
     }
     if(typeof process.env.IDX_green_alert != "undefined") {
         http_request.get(process.env.DOMOTICZ_JSON_URL+"?type=command&param=udevice&idx="+process.env.IDX_green_alert+"&nvalue=1&svalue="+new Date(max_green.timeStamp).toLocaleString()+" "+max_green.eevalue+"",function(a,b,c) {
-          console.log(c);
         })
     }
     if(typeof process.env.IDX_red_alert != "undefined") {
         http_request.get(process.env.DOMOTICZ_JSON_URL+"?type=command&param=udevice&idx="+process.env.IDX_red_alert+"&nvalue=4&svalue="+new Date(min_green.timeStamp).toLocaleString()+" "+min_green.eevalue+"",function(a,b,c) {
-          console.log(c);
         })
-    }
-    console.log(min_green);
-    console.log(max_green);
+    }    
   }
 });

@@ -3,11 +3,12 @@
 	"version": "0.0.1",
 	"description": "Corrently Green Power Index for Domoticz",
 	"keywords": [
-		"domoticz"
+		"domoticz",
+		"corrently",
+		"blockchain",
+		"gsi",
+		"energy"
 	],
-	"bin": {
-		"corrently4domoticz": "./index.js"
-	},
 	"homepage": "https://github.com/energychain/corrently4domoticz#readme",
 	"bugs": {
 		"url": "https://github.com/energychain/corrently4domoticz/issues"
@@ -15,6 +16,9 @@
 	"license": "ISC",
 	"author": "Corrently Corp",
 	"main": "index.js",
+	"bin": {
+		"corrently4domoticz": "./index.js"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/energychain/corrently4domoticz.git"
